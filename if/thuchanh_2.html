@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="login" placeholder="Login">
+    <button onclick="LoGinn()">Nhập</button>
+    <br><br>
+    <div id="hienthi"></div>
+</body>
+</html>
+<script>
+    // bài thực hành 1
+    // let a = prompt("a: ");
+    // let b = prompt("b: ");
+    // result = (a + b < 4) ? 'Below' : 'Over';
+    // if ((a+b)<4) {
+    //     alert (result = 'Below');
+    // } else {
+    //     alert (result = 'Over');
+    // }
+        function LoGinn () {
+        let logi = document.getElementById("login").value;
+        let message= " ";
+        if (logi == "employee") {
+            alert( message = "welcome");
+        } else if (logi == "Director") {
+           alert ( message = "Greetings");
+        } else if (logi == " ") {
+            alert( message = "No login");
+        } else {
+           alert ( message = "không gì cả ");
+        }
+        alert (message);
+        // document.getElementById("hienthi").innerHTML = message;
+}
+</script>

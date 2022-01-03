@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "username" placeholder="username"><br><br>
+    <input type="password" id="pass" placeholder="password" style= "display: none;"><br>
+    <button onclick="check_user()">Check</button><br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    // let username = prompt ("tên đăng nhập là:", '');
+    
+
+    // if (username == "Admin") {
+    //     pass = prompt ("mật khẩu là:", '');
+    //     if (pass == "TheMaster") {
+    //         alert ('welcome');
+    //     } else if (pass == "null") {
+    //         alert ("cancel");
+    //     } else {
+    //         alert ("Wrong password");
+    //     }
+    // } else if (username == "null" ) {
+    //     alert ("cancel");
+    // } else {
+    //     alert("I don't know you");
+    // }
+    function check_user() {
+        let user = document.getElementById("username").value;
+        　　pass1 = document.getElementById("pass").value;
+        if (user == "Admin") {
+            document.getElementById("pass").style.display="block";
+    
+            if (pass1 == "TheMaster") {
+                document.getElementById("result").innerHTML = "welcome"; 
+            } else if (pass1 == "null") {
+                document.getElementById("result").innerHTML = "cancel";
+            } else {
+                document.getElementById("result").innerHTML = " i dont know you";
+            }
+        
+        } else if (user == "null") {
+            document.getElementById("result").innerHTML = "cancel"
+        } else {
+            document.getElementById("result").innerHTML = "toi khong biet ban";
+        }
+    }
+</script>
