@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        Số tiền <input type="number" id="so_tien" placeholder="nhập số tiền"><br><br>
+        Từ tiền <select name="" id="tu_tien">
+            <option value="">Việt Nam</option>
+            <option value="">Mỹ</option>
+            <option value="">Nhật</option>
+            <option value="">Hàn Quốc</option>
+        </select><br><br>
+        Sang tiền <select name="" id="sang_tien">
+            <option value="">Việt Nam</option>
+            <option value="">Mỹ</option>
+            <option value="">Nhật</option>
+            <option value="">Hàn Quốc</option>
+        </select>
+        <button onclick="doi_tien()">Đổi</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function doi_tien() {
+        let tutien = document.getElementById("tu_tien").value;
+        let sangtien = document.getElementById("sang_tien").value;
+        let sotien = document.getElementById("so_tien").value;
+        let result= " ";
+
+        if ( tutien == "Việt Nam" && sangtien == "Việt Nam") {
+            result = sotien;
+            
+        } else if (tutien == "Việt Nam" && sangtien == "Mỹ") {
+            result = (sotien * 220);
+        } else if ( tutien == "Mỹ"  && sangtien == "Việt Nam") {
+            result = (sotien / 220);
+        }
+        alert("kêt quả là: ", result);
+    }
+    
+
+</script>

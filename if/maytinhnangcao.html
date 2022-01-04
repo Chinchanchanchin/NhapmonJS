@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="view">
+        <br><br>
+        <button value="1" onclick="inputValue(this.value)">1</button>
+        <button value="2" onclick="inputValue(this.value)">2</button>
+        <button value="3" onclick="inputValue(this.value)">3</button>
+        <button value="+" onclick="inputValue(this.value)">+</button>
+        <br><br>
+        <button value="4" onclick="inputValue(this.value)">4</button>
+        <button value="5" onclick="inputValue(this.value)">5</button>
+        <button value="6" onclick="inputValue(this.value)">6</button>
+        <button value="-" onclick="inputValue(this.value)">-</button>
+        <br><br>
+        <button value="7" onclick="inputValue(this.value)">7</button>
+        <button value="8" onclick="inputValue(this.value)">8</button>
+        <button value="9" onclick="inputValue(this.value)">9</button>
+        <button value="*" onclick="inputValue(this.value)">*</button>
+        <br><br>
+        <button value="C" onclick="xoa()">C</button>
+        <button value="0" onclick="inputValue(this.value)">0</button>
+        <button onclick="tinhtoan()">=</button>
+        <button value="/" onclick="inputValue(this.value)">/</button>
+    </div>
+</body>
+</html>
+<script>
+    function inputValue (value) {
+        let view = document.getElementById('view');
+        view.value += value;  
+    }
+    function tinhtoan() {
+        let result = eval(view.value)
+        view.value = result;
+    }
+    function xoa() {
+        view.value = "";
+    }
+</script>
