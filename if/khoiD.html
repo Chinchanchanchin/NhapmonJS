@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+        <h5>Nhập điểm Toán</h5><input id="diemtoan">
+        <h5>Nhập điểm Văn</h5><input id="diemvan">
+        <h5>Nhập điểm Anh</h5><input id="diemanh">
+        <h5>Chọn khu vực</h5><select name="" id="kv">
+            <option value="kv1">KV1</option>
+            <option value="kv2">KV2</option>
+            <option value="2nt">KV2NT</option>
+            <option value="3">KV3</option>
+        </select>
+        <button onclick="tinhdiem()">Tính điểm</button>
+        <div id ="result">Hiện kết quả</div>
+    
+</body>
+</html>
+<script>
+    function tinhdiem() {
+        let diem_toan = Number(document.getElementById("diemtoan").value);
+        let diem_van = Number(document.getElementById("diemvan").value);
+        let diem_anh = Number(document.getElementById("diemanh").value);
+        let kv = document.getElementById("kv").value;
+        let tong = diem_toan + diem_van + diem_anh;
+        console.log(tong)
+        switch (kv) {
+            case "kv1": tong += 0.75;
+            break;
+            case "kv2" : tong += 0.5;
+            break;
+            case"2nt" : tong += 0.25;
+            break;
+            case "kv3" : tong += 0;
+            break;
+            
+        }
+        document.getElementById("result").innerHTML = tong;
+    }
+</script>
