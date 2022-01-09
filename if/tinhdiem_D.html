@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nhập điểm thi</h1>
+    <input type="number" id="toan" placeholder="nhập điểm Toán">
+    <input type="number" id="van" placeholder="nhập điểm Văn">
+    <input type="number" id="anh" placeholder="nhập điểm Anh">
+    <select name="" id="khuvuc">
+        <option value="1">KV1</option>
+        <option value="2">KV2</option>
+        <option value="2NT">KV2-NT</option>
+        <option value="3">KV3</option>
+    </select>
+    <button onclick="tinh_diem()">Tính điểm</button>
+    <div id="result">Chỗ hiện kết quả</div>
+</body>
+</html>
+<script>
+    function tinh_diem() {
+    let diem_toan = Number( document.getElementById("toan").value);
+    let diem_van = Number(document.getElementById("van").value);
+    let diem_anh =Number (document.getElementById("anh").value);
+    let kv = ( document.getElementById("khuvuc").value);
+    let tong = diem_toan + diem_van + diem_anh;
+    console.log(tong);
+     switch (kv) {
+         case "1":
+             tong += 0.75;
+        
+             break;
+        case "2" : 
+            tong += 0.5;
+             break;
+        case "2NT" :
+            tong += 0.25;
+            break;
+        case "3" :
+            tong +=   0;
+        break;
+         default:
+             break;
+             console.log(kv)
+             
+            }
+            document.getElementById("result").innerHTML = tong ;
+            }
+     
+</script>

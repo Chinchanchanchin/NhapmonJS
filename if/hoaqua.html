@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Giá hoa quả </h1>
+    <input type="text" id="hoaqua"> <br> <button onclick="tinhgia()">Xem giá</button>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function tinhgia (){
+    let fruit = document.getElementById("hoaqua").value;
+    let result = "";
+    switch (fruit) {
+        case "Ổi" : result = "20,000 đồng";
+        break;
+        case "sầu riêng" : result = "50,000 đồng";
+        break;
+        case "táo" : result = "30,000 đồng";
+        break;
+        case "lê" : 
+        case "cam":
+        case "chôm chôm" : result = "10,000 đồng";
+        break;
+        default : result = "chưa nhập hàng";
+    }
+    document.getElementById("result").innerHTML = result;
+
+    }
+</script>
