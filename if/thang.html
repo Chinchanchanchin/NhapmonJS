@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let month = prompt("nhập tháng");
+    let thang1 = "tháng 1";
+    let thang2 = "tháng 2";
+    let thang3 = "tháng 3";
+    let thang4 = "tháng 4";
+    let thang5 = "tháng 5";
+    let thang6 = "tháng 6";
+    let thang7 = "tháng 7";
+    let thang8 = "tháng 8";
+    let thang9 = "tháng 9";
+    let thang10 = "tháng 10";
+    let thang11 = "tháng 11";
+    let thang12 = "tháng 12";
+    // switch (month) {
+    //     case "tháng 1":
+    //     case "tháng 3":
+    //     case "tháng 5":
+    //     case "tháng 7":
+    //     case "tháng 8": 
+    //     case "tháng 10":
+    //     case "tháng 12": alert (month + " có 31 ngày");
+    //     break;
+    //     case "tháng 2": alert (month + " có 28 hoặc 29 ngày");
+    //     break;
+    //     default : alert(month + " có 30 ngày");
+    //     break;
+    // }
+    if (month == thang1 || month == thang3 || month == thang5 || month == thang7 || month == thang8 || month == thang10 || month == thang12) {
+        alert (month + " có 31 ngày");
+    } else if (month == thang2) {
+        alert (month + " có 28 hoặc 29 ngày");
+    } else if (month == thang4 || month == thang6 || month == thang9|| month == thang11) {
+        alert(month + " có 30 ngày");
+    } else {
+        alert("trong lịch không có tháng này");
+    }
+</script>
