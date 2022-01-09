@@ -7,42 +7,53 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="">
+    
         Số tiền <input type="number" id="so_tien" placeholder="nhập số tiền"><br><br>
         Từ tiền <select name="" id="tu_tien">
-            <option value="">Việt Nam</option>
-            <option value="">Mỹ</option>
-            <option value="">Nhật</option>
-            <option value="">Hàn Quốc</option>
+            <option value="vn">Việt Nam</option>
+            <option value="us">Mỹ</option>
+            <option value="jp">Nhật</option>
         </select><br><br>
         Sang tiền <select name="" id="sang_tien">
-            <option value="">Việt Nam</option>
-            <option value="">Mỹ</option>
-            <option value="">Nhật</option>
-            <option value="">Hàn Quốc</option>
+            <option value="vn">Việt Nam</option>
+            <option value="us">Mỹ</option>
+            <option value="jp">Nhật</option>
         </select>
-        <button onclick="doi_tien()">Đổi</button>
-    </form>
-    <div id="result"></div>
+        <br><br>
+        <button onclick="doitien()">Đổi tiền</button><br><br>
+        <div>Số tiền quy đổi là : </div><br>
+        <div id="result"></div>
 </body>
 </html>
 <script>
-    function doi_tien() {
-        let tutien = document.getElementById("tu_tien").value;
-        let sangtien = document.getElementById("sang_tien").value;
+    function doitien() {
+        let tutien = document.getElementById("tu_tien");
+        let tutiennuoc = tutien.options[tutien.selectedIndex].value;
+        let sangtien = document.getElementById("sang_tien");
+        let sangtiennuoc = sangtien.options[sangtien.selectedIndex].value;
         let sotien = document.getElementById("so_tien").value;
+        
         let result= " ";
-
-        if ( tutien == "Việt Nam" && sangtien == "Việt Nam") {
-            result = sotien;
-            
-        } else if (tutien == "Việt Nam" && sangtien == "Mỹ") {
-            result = (sotien * 220);
-        } else if ( tutien == "Mỹ"  && sangtien == "Việt Nam") {
-            result = (sotien / 220);
+        if (tutiennuoc == "vn" && sangtiennuoc == "us") {
+            result = sotien / 22000;
+            document.getElementById("result").innerHTML = result + " usd";
+        } else if (tutiennuoc == "us" && sangtiennuoc == "vn") {
+            result = sotien*22000;
+            document.getElementById("result").innerHTML = result + " vnd";
+        } else if (tutiennuoc == "vn" && sangtiennuoc == "jp") {
+            result = sotien / 200;
+            document.getElementById("result").innerHTML = result + " yên";
+        } else if (tutiennuoc == "jp" && sangtiennuoc == "vn") {
+            result = sotien * 200;
+            document.getElementById("result").innerHTML = result + " vnd";
+        } else if (tutiennuoc == "jp" && sangtiennuoc == "us") {
+            result = sotien / 115 ;
+            document.getElementById("result").innerHTML = result + " usd";
+        } else if (tutiennuoc == "us" && sangtiennuoc == "jp") {
+            result = sotien * 115;
+            document.getElementById("result").innerHTML = result + " yên";
         }
-        alert("kêt quả là: ", result);
+       
     }
-    
 
 </script>
