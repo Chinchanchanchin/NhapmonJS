@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number" placeholder="nhập năm dương" id="namduong">
+    <input placeholder="nhập năm dương" id="namduong">
     <button onclick="timnamam()">check</button>
     <div id="result"></div>
 </body>
@@ -23,58 +23,58 @@ function timnamam () {
     let chidu = nam_duong % 12;
    
     switch (candu) {
-        case "0" : can = "Canh";
+        case 0 : can = "Canh";
         break;
-        case "1" : can = "Tân";
+        case 1 : can = "Tân";
         break;
-        case "2" : can = "Nhâm";
+        case 2 : can = "Nhâm";
         break;
-        case "3" : can = "Quý";
+        case 3 : can = "Quý";
         break;
-        case "4" : can = "Giáp";
+        case 4 : can = "Giáp";
         break;
-        case "5" : can = "Ất";
+        case 5 : can = "Ất";
         break;
-        case "6" : can = "Bính";
+        case 6 : can = "Bính";
         break;
-        case "7" : can = "Đinh";
+        case 7 : can = "Đinh";
         break;
-        case "8" : can = "Mậu";
+        case 8 : can = "Mậu";
         break;
-        case "9" : can = "Kỷ";
+        case 9 : can = "Kỷ";
         break;
     }
   console.log(can);
 
     switch (chidu) {
-        case "0" : chi = "Thân"
+        case 0 : chi = "Thân"
         break;
-        case "1" : chi = "Dậu"
+        case 1 : chi = "Dậu"
         break;
-        case "2" : chi = "Tuất"
+        case 2 : chi = "Tuất"
         break;
-        case "3" : chi = "Hợi"
+        case 3 : chi = "Hợi"
         break;
-        case "4" : chi = "Tý"
+        case 4 : chi = "Tý"
         break;
-        case "5" : chi = "Sửu"
+        case 5 : chi = "Sửu"
         break;
-        case "6" : chi = "Dần"
+        case 6 : chi = "Dần"
         break;
-        case "7" : chi = "Mão"
+        case 7 : chi = "Mão"
         break;
-        case "8" : chi = "Thìn"
+        case 8 : chi = "Thìn"
         break;
-        case "9" : chi = "Tỵ"
+        case 9 : chi = "Tỵ"
         break;
-        case "10" : chi = "Ngọ"
+        case 10 : chi = "Ngọ"
         break;
-        case "11" : chi = "Mùi"
+        case 11 : chi = "Mùi"
         break;
     
     }
     console.log(chi)
-    namam = can + chi;
+    let namam = can + " " + chi;
     document.getElementById("result").innerHTML = namam;
     }
 </script>
