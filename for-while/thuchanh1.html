@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="thuchanh1()">bài 1</button>
+    
+    <br>
+    <br>
+    <button onclick="thuchanh2()">bài 2</button>
+   
+</body>
+</html>
+<script>
+    function thuchanh1() {
+        let num = +prompt("nhập vào số:");
+        let total = 0;
+        while(num!= -1) {
+            num = +prompt("nhập vào số : ");
+            // alert(num);
+            total += num;
+            alert(total);
+        }
+        
+    }
+
+    function thuchanh2() {
+        let i = 1;
+        while (i<100) {
+            document.write("<hr width = " + i + "%>");
+            i++;
+        }
+    }
+</script>

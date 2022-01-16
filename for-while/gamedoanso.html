@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let input = +prompt("Nhập số lớn nhất trong khoảng bạn muốn đoán: ");
+    let khoangcach = input - 15;
+    let sodoan = +prompt("nhập số bạn muốn đoán từ " + khoangcach + " đến " + input);
+    let number = Math.floor(Math.random()*(input - khoangcach + 1))+ khoangcach; 
+    console.log(number);
+    let count; 
+
+
+    for (count= 1; count < 3; count ++) {
+        if (sodoan < number) {
+            sodoan = +prompt("bé hơn số đúng. Vui lòng nhập lại");
+        } else if (sodoan > number) {
+            sodoan = +prompt("lớn hơn số đúng. Vui lòng nhập lại");
+        } else if (sodoan = number) {
+            alert("kết quả đúng");
+        }
+    } alert("đã kết thúc 3 lần đoán, kết thúc trò chơi");
+</script>

@@ -11,20 +11,13 @@
 </body>
 </html>
 <script>
-    let a = 1;
-    let b = 0;
-    let i = 100;  
-    let fibo;
-    while (i>=0) {
-        fibo= a;
-        a= a+b;
-        b= fibo;
-        i--;
-       
-        document.write(b +" ");
+    let magic = "vừng ơi mở ra";
+    let thanchu = "";
+    do {
+        thanchu = prompt("hãy nhập thần chú");
+        
+    } while (thanchu !== magic)
     
-    
-    } 
-
-
+    alert("Thần chú đúng, xin mời vào");
+      
 </script>
