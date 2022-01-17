@@ -11,19 +11,20 @@
 </body>
 </html>
 <script>
+
+    debugger;
+    let number = +prompt("Bạn muốn in bao nhiêu số finabocci?  ");
     let a = 1;
-    let b = 0;
-    let i = 100;  
-    let fibo;
-    while (i>=0) {
-        fibo= a;
-        a= a+b;
-        b= fibo;
+    let b = 0;  
+    let fibo = "";
+    let i = number; 
+    while (i > 0) {
+        fibo = a;
+        a = a + b;
+        b = fibo;
+        document.write(b + "</br>");
         i--;
        
-        document.write(b + "</br");
-    
-    
     } 
 
 

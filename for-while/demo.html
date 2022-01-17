@@ -54,20 +54,42 @@
 
 
     
-let sout, i, j;
-sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
-i = j = 1;
-while (i <= 10) {
-    sout = sout + "<tr>";
-    while (j <= 10) {
-        sout = sout + "<td>" + i * j + "</td>";
-        j++;
+// let sout, i, j;
+// sout = "<table border='1' width='300' cellspacing='0' cellpadding='3'>";
+// i = j = 1;
+// while (i <= 10) {
+//     sout = sout + "<tr>";
+//     while (j <= 10) {
+//         sout = sout + "<td>" + i * j + "</td>";
+//         j++;
+//     }
+//     sout = sout + "</tr>";
+//     j = 1;
+//     i++;
+// }
+// sout = sout + "</table>";
+// document.write(sout);
+
+
+
+    let i;
+    let j;
+    for (i = 1; i<= 5; i++) {
+       for (j = 1; j<= i; j++) {
+          document.write("A")
+       }
+       document.write("B");
     }
-    sout = sout + "</tr>";
-    j = 1;
-    i++;
-}
-sout = sout + "</table>";
-document.write(sout);
+   document.write("</br>")
+
+
+   for (i= 5; i >= 1; i--) {
+      for (j = i; j >= 1; j--) {
+         document.write("C");
+      }
+      document.write("D");
+   }
+   document.write("</br>");
+   
 
 </script>

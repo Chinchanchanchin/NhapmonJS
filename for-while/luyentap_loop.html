@@ -7,11 +7,18 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <button onclick="bai1()">Bài 1</button> <br><br>
+    <button onclick="bai2()">Bài 2</button><br><br>
+    <button onclick="bai3()">Bài 3</button><br><br>
+    <button onclick="bai4()">Bài 4</button><br><br>
+    <button onclick="bai5()">Bài 5</button><br><br>
+    <button onclick="bai6()">Bài 6</button><br><br>
+    <button onclick="bai7()">Bài 7</button><br><br>
+
 </body>
 </html>
 <script>
-   
+   function bai1() {
     let num = 1;
     while (num<100) {
         document.write("hiển thi số " + num + "</br>") ;
@@ -19,8 +26,114 @@
     } if (num == 99) {
         alert("đã hoàn thành");
     }
+}
+
+function bai2 () {
+    let nhietdo = +prompt("nhập nhiệt độ vào: ");
+    
+     while (nhietdo > 20 && nhietdo < 100) {
+       alert("Nhiệt độ chuẩn");
+       
+     }  if (nhietdo>100) {
+            alert("Vui lòng giảm nhiệt độ");
+        } else {
+            alert("Vui lòng tăng nhiệt độ");
+        }
+        
+}
+
+function bai3 () {
+    debugger;
+    let a = 1;
+    let b = 0;  
+    let fibo = "";
+    let i = 20; 
+    while (i > 0) {
+        fibo = a;
+        a = a + b;
+        b = fibo;
+        document.write(b + ", ");
+        i--;
+       
+    } 
+}
+
+function bai4() {
+    debugger;
+    let a = 1;
+    let b = 0;  
+    let fibo = "";
+    let i = 20; 
+    while (i > 0) {
+        fibo = a;
+        a = a + b;
+        b = fibo;
+        console.log(b + ", ");
+        i--;
+        if (b%5 == 0) {
+            document.write("số fibonacci đầu tiên chia hết cho 5 là " + b);
+            break;
+        }
+    } 
+}
+    function bai5() {
+        debugger;
+    let a = 1;
+    let b = 0;  
+    let fibo = "";
+    let i = 20;
+    let sum = 0; 
+    while (i > 0) {
+        fibo = a;
+        a = a + b;
+        b = fibo;
+        console.log(b);
+        sum += b;
+        i--;
+    } document.write(sum);
+    }
 
 
+
+    function bai6() {
+        let i = 30;
+        
+        let sum = 0;
+
+        while (i>0) {
+            sum+= i;
+            i--;
+            if (sum % 7== 0) {
+                document.write("đây là tổng 30 số đầu tiên cha hết cho 7 là " + sum);
+                break;
+            }
+        } 
+    }
+
+
+    function bai7() {
+        let number = 0;
+
+        while (number < 15) {
+            number++;
+           if (number % 3 == 0 && number % 5 == 0) {
+                
+                document.write(" FizzBuzz "); 
+            } else if (number % 3 == 0 && number % 5 !== 0) {
+
+                document.write(" Fizz ");
+            }  else if (number % 5 == 0 && number % 3 !== 0) {
+
+                document.write(" Buzz ");
+            }  else {
+                document.write(number +" ");
+            }
+           
+        }  
+            
+            
+    }
+    
 </script>
 
 
