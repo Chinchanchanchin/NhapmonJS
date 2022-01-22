@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="dic"><br>
+    <button onclick="tudien()">Search</button><br>
+    <div id="result"></div>
+</body>
+</html>
+<script>
+    function tudien() {
+        let anh = document.getElementById("dic").value;
+        let viet = ["táo", "chuối", "cam"];
+        let anh1 = ["apple", "banana", "orange"];
+        let index= 0;
+        let flag = false;
+        let result;
+        for ( let i= 0; i<anh1.length; i++) {
+            if (anh == anh1[i]) {
+                index = i;
+                for (let j=0; j<viet.length; j++) {
+                    if (index == j) {
+                        result = viet[j];
+                        flag = true;
+                        break;
+                      }
+                    
+                }
+            } 
+        } 
+        if (flag) { document.getElementById("result").innerHTML = result;
+                    }  else { alert("Từ này không có trong từ điển, vui lòng nhập lại")
+                        }
+    }
+</script>
