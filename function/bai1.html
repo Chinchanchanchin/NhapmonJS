@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function starsName(star) {
+
+    let str1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let str2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    let index = 0;
+    let flag =false;
+    let result;
+  
+    for (let i= 0; i<str1.length; i++) {
+        if (star == str1[i]) {
+            index = i;
+            for (let j= 0; j<str2.length; j++) {
+                if (index == j) {
+                    result = str2[j];
+                    flag = true;
+                    break;
+                }
+            }
+        } 
+    } 
+    if (flag) { document.write("Ngôi sao này nằm trong chòm sao: " + result);
+        }  else { alert("không có ngôi sao này");
+            }
+    
+    } 
+    let star = prompt("nhập tên ngôi sao");
+    starsName(star);
+</script>

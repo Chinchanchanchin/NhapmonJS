@@ -1,0 +1,102 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+header {
+
+    height: 220px;
+    background-image: linear-gradient(purple, pink);
+}
+.navbar-brand img {
+    width: 80px;
+    height: 60px;
+    padding: 10px;
+}
+.btn-outline-success {
+    color: white;
+}
+.btn-outline-success:hover {
+    background-color: rgb(197, 56, 103);
+}
+header h1 {
+    text-align: center;
+    padding-top: 40px 10px 10px 10px;
+    font-size: 50px;
+    font-weight: bolder;
+    font-family: 'poppins', sans-serif;
+}
+.main-img {
+    width: 400px;
+    height: 300px;
+    margin-top: -120px;
+    z-index: 0;
+    position: absolute;
+}
+.form-control {
+    width: 300px;
+}
+.col-md-4 {
+    position: relative;
+    transition: .3s;
+    cursor: pointer;
+    box-sizing: border-box;
+    border-radius: 5%;
+    box-shadow: 0px 3px 8px rgb(185, 51, 103);
+    border: beige solid 1px;
+    padding: 10vmin;
+    margin: 70px 10px 70px 10px;
+    flex-basis: 27%;
+
+}
+.col-md-4 h5 {
+    text-align: center;
+}
+
+.col-md-4 img {
+    width: 100px;
+    height: 60px;
+    border-radius: 30%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+}
+.col-md-4:hover {
+    transform: translateY(10px);
+}
+
+footer {
+    height: 70px;
+    background-image: linear-gradient(pink,purple);
+    text-align: center;
+}
+
+footer .fab {
+    padding-left: 20px;
+    color: white;
+    width: 50px;
+    height: 30;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+footer .fab:hover {
+    color: brown;
+}
+footer p {
+    color: rgb(175, 173, 173);
+    font-weight: 5px;
+    
+}
+
+
+/* page3 */
+
+.d-flex  .ques {
+    box-sizing: border-box;
+    border: black 1px solid;
+    padding: 20px;
+}

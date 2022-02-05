@@ -1,18 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
-<script>
-    let input = +prompt("Nhập số lớn nhất trong khoảng bạn muốn đoán: ");
-    let khoangcach = input - 15;
+function numbRandom () {
+    let input = document.getElementById("input").value;
+    let khoangcach = input - 10;
     let sodoan = +prompt("nhập số bạn muốn đoán từ " + khoangcach + " đến " + input);
     let number = Math.floor(Math.random()*(input - khoangcach + 1))+ khoangcach; 
     console.log(number);
@@ -31,6 +19,18 @@
             break;
         }
     } alert("kết thúc trò chơi");
+ }
 
-   
-</script>
+
+ function guess() {
+     let input = prompt("Nhập chữ số mà bạn muốn đoán");
+     let arr1= ["L","Y","T","H","A","I","T","O"];
+     let count=0;
+     for(let i = 0; i<arr1.length;i++) {
+         if (input = arr1[i]) {
+             count+=count;
+             alert(arr1[i] + "xuất hiện" + count + "lần");
+             
+         }
+     }
+ }
