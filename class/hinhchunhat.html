@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <canvas id="mycanvas" style="border: 1px solid black;"></canvas> -->
+</body>
+</html>
+<script>
+    class Rectangle {
+        width;
+        height;
+        constructor (d,r) {
+            this.width = d;
+            this.height = r;
+        }
+
+        getChuvi() {
+            return (this.width + this.height) * 2; 
+        } 
+        getDientich() {
+            return this.width * this.height;
+        }
+    }
+
+    let vav = new Rectangle(1,2);
+  
+    document.write(vav.getChuvi());
+</script>

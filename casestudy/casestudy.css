@@ -8,7 +8,7 @@
 
 header {
 
-    height: 220px;
+    height: 180px;
     background-image: linear-gradient(purple, pink);
 }
 .navbar-brand img {
@@ -95,8 +95,37 @@ footer p {
 
 /* page3 */
 
-.d-flex  .ques {
+ .key {
+     display: none;
+ }
+.L, .Y , .T, .H, .A, .I, .O {
     box-sizing: border-box;
     border: black 1px solid;
-    padding: 20px;
+    padding: 50px;
+    font-size: 40px;
 }
+
+.ansL, .ansY , .ansT, .ansH, .ansA, .ansI, .ansO {
+    box-sizing: border-box;
+    border: black 1px solid;
+    padding: 50px;
+    font-size: 40px;
+}
+
+.playagain , .endgame {
+    width: 150px;
+    padding: 15px;
+    margin: 30px 10px 10px 10px;
+    background: rgb(230, 100, 175);
+    font-weight: bolder;
+    box-sizing: border-box;
+    box-shadow: black 2px 5px;
+    color: white;
+}
+.sc {
+    margin-top: 40px;
+    font-weight: 70px;
+    font-size: large;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+

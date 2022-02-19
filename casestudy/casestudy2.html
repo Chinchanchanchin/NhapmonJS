@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="casestudy.css">
-    <script src="casestudy.js"></script>
+    
     <title>Document</title>
 </head>
 <body>
@@ -25,18 +25,19 @@
           </nav>
         <h1>Welcome to the world of games</h1>
     </header>
-    <main >
-       <div>
-           <h1>Trò  chơi đoán só ngẫu nhiên</h1>
-           <p>Bắt đầu trò chơi</p>
-           <br>
-           <p>Nhập số lớn nhất trong khoảng bạn muốn đoán</p>
-           <input type="number" id="input">
-           <button onclick="numbRandom()">Chọn</button>
-           <br>
-           <div id="khoang"></div>
-           <div id="result"></div>
-       </div>
+    <main class="d-flex flex-wrap" style="background-color: rgb(248, 221, 238);" >
+       <div class="col-md-10">
+        <canvas id="canvas" width="1000" height="500" style = "border:5px solid #000000; margin-left: 150px;" ></canvas>
+      </div>
+      <div class="col-md-2">
+        
+        <p id="score1" class="sc"> Score : </p>
+        <button class="playagain" onclick="reload()">Play again</button><br>
+        <button class="endgame" onclick="endGame()">End game</button><br><br>
+        <input type="checkbox" value="" name="mute" onclick=""> Play sound <br>
+        <input type="checkbox" value="" name="mute" onclick="muted()"> Mute
+
+      </div>
     </main>
     <footer class="container-fluid">
         <a href=""><i class="fab fa-facebook"></i></a>
@@ -44,5 +45,7 @@
         <a href=""><i class="fab fa-instagram"></i></a>
         <p>@Copyright by The world of game</p>  
     </footer>
+    
 </body>
+<script src="casestudy.js"></script>
 </html>
