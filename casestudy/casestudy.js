@@ -83,7 +83,7 @@ function run () {
             gameover.play();
             ctx.drawImage(gOver,100,100);
             ctx.drawImage(tryagain,600,150);
-            ctx.fillStyle = "#006400";
+            ctx.fillStyle = "#000000";
             ctx.font = "50px Verdana bolder";
             ctx.fillText("Your score: " + score,370,cans.height/5);
             return;
