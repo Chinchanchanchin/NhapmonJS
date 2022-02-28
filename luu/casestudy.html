@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="casestudy.css">
-    
+    <link rel="stylesheet" href="casestudy.js">
     <title>Document</title>
 </head>
 <body>
@@ -25,19 +25,25 @@
           </nav>
         <h1>Welcome to the world of games</h1>
     </header>
-    <main class="d-flex flex-wrap" style="background-color: rgb(248, 221, 238);" >
-       <div class="col-md-10">
-        <canvas id="canvas" width="1000" height="500" style = "border:5px solid #000000; margin-left: 150px;" ></canvas>
-      </div>
-      <div class="col-md-2">
-        
-        <p id="score1" class="sc"> Score : </p>
-        <button class="playagain" onclick="reload()">Play again</button><br>
-        <button class="endgame" onclick="endGame()">End game</button><br><br>
-        <input type="checkbox" value="" name="mute" onclick=""> Play sound <br>
-        <input type="checkbox" value="" name="mute" onclick="muted()"> Mute
-
-      </div>
+    <main >
+        <img class="main-img" src="img/homepage.png" alt="">
+        <div class="container d-flex flex-wrap justify-content-center">
+        <div class="col-md-4 col-12">
+            <h5>Ai là triệu phú</h5>
+            <hr>
+            <a href=""><img src="img/start.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-12">
+            <h5>Flying Bird game</h5>
+            <hr>
+            <a href="casestudy2.html"><img src="img/start.png" alt=""></a>
+        </div>
+        <div class="col-md-4 col-12">
+            <h5>Đoán số ngẫu nhiên</h5>
+            <hr>
+            <a href=""><img src="img/start.png" alt=""></a>
+        </div>
+        </div>
     </main>
     <footer class="container-fluid">
         <a href=""><i class="fab fa-facebook"></i></a>
@@ -45,7 +51,5 @@
         <a href=""><i class="fab fa-instagram"></i></a>
         <p>@Copyright by The world of game</p>  
     </footer>
-    
 </body>
-<script src="casestudy.js"></script>
 </html>
